@@ -1,0 +1,50 @@
+%Program with syntactical and lexical errors
+
+_function1
+    % list keyword is missing in function definition
+    input parameter list [int c2, int d2cd]
+    output parameter  [int b5d, int d3];
+    b5d<---c2+234-d2cd;
+
+    % Semicolon missing in following line. Error will be shown at line number 11 i.e. the line number of next statement.
+    d3<---b5d+20
+    return [b5d, d3];
+end
+
+_main
+
+    definetype union #student as #newname
+    record #taggedunionexample
+        type int: tagvalue;
+        type #newname: field;
+    endrecord
+
+    %global keyword missing
+    type int: b4d333:;
+
+    type int : c3ddd34; type int:c2d3; type int c2d4;
+    b7bc34.tagvalue <--- 1;
+    b7bc34. field.rollno <--- 23;
+    write(b7bc34. field.rollno); 
+    write(b7bc34. field.marks);
+
+    %Missing semicolon. Error will be shown at line number 34 i.e. the line number of next statement.
+    b7bc34.tagvalue <--- 2
+
+    %97.5 is invalid token
+    b7bc34. field.marks <--- 97.5;
+    b7bc34.tagvalue <--- 3;
+
+
+    % invalid token <-- in following line
+    b7bc34. field.age <-- 21;
+    read(b4d333); read(c3ddd34);
+    while(c2d3 <9)
+        c2d3 <--- c2d3+1;
+        write (c2d3);
+    endwhile
+
+    [c2d3, c2d4]<--- call _function1 with parameters [b4d333, c3ddd34];
+    write(c2d3); write(c2d4);
+    % Return statement missing
+end
